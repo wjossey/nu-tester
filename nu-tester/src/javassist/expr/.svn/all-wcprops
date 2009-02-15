@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr
+END
+Cast.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/Cast.java
+END
+MethodCall.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/MethodCall.java
+END
+FieldAccess.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/FieldAccess.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/package.html
+END
+Instanceof.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/Instanceof.java
+END
+Handler.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/Handler.java
+END
+NewArray.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/NewArray.java
+END
+ConstructorCall.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/ConstructorCall.java
+END
+NewExpr.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/NewExpr.java
+END
+Expr.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/Expr.java
+END
+ExprEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/expr/ExprEditor.java
+END

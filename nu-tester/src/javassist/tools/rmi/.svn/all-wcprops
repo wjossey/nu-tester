@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi
+END
+Proxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi/Proxy.java
+END
+RemoteRef.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi/RemoteRef.java
+END
+AppletServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi/AppletServer.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi/package.html
+END
+Sample.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi/Sample.java
+END
+RemoteException.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi/RemoteException.java
+END
+StubGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi/StubGenerator.java
+END
+ObjectNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi/ObjectNotFoundException.java
+END
+ObjectImporter.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/rmi/ObjectImporter.java
+END

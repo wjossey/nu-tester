@@ -1,0 +1,372 @@
+package tester;
+
+import java.lang.reflect.*;
+import java.util.*;
+
+import tester.Traversal;
+
+//import org.apache.log4j.Logger;
+
+/**
+ * Copyright 2007, 2008 Viera K. Proulx
+ * This program is distributed under the terms of the 
+ * GNU Lesser General Public License (LGPL)
+ */
+
+/**
+ * This class leverages the use of the Java reflection classes to pretty-print
+ * the values of an arbitrary object. It includes the values of user-defined
+ * fields, but does not extend to fields inherited from Java library
+ * superclasses.
+ * 
+ * @author Viera K. Proulx
+ * @since 3 March 2008, 11 November 2008, 23 January 2009
+ * 
+ */
+public class Printer {
+	//private static final Logger logger = Logger
+	//		.getLogger(Printer.class);
+	/** current indentation level for pretty-printing */
+	private static String INDENT = "  ";
+
+	/** the resulting string produced */
+	private static StringBuilder result;
+
+	/** object counter */
+	private static int counter;
+
+	/** dot counter */
+	private static int dots;
+
+	/**
+	 * a hashmap of the hashcodes for the objects that are being printed: if the
+	 * same pair is compared again, the loop of printing stops and produces true
+	 */
+	private static HashMap<Integer, Integer> hashmap = 
+		new HashMap<Integer, Integer>();
+
+	/**
+	 * Print the values of the given object
+	 * 
+	 * @param obj the object to display in the console
+	 */
+	public static void print(Object obj) {
+		hashmap.clear();
+		counter = 0;
+		// hashmap.put(obj.hashCode(), obj.hashCode());
+		result = new StringBuilder("");
+		System.out.println(makeString(obj));
+	}
+
+	/**
+	 * Produce a String representation of the values of the given object
+	 * 
+	 * @param obj the object to represent
+	 * @return a String representation of the values of the given object
+	 */
+	public static String produceString(Object obj) {
+		hashmap.clear();
+		counter = 0;
+		// hashmap.put(obj.hashCode(), obj.hashCode());
+		result = new StringBuilder("");
+		return makeString(obj);
+	}
+
+	/**
+	 * Produce a String representation of the given object.
+	 * <P>
+	 * Show <code>String</code> 'as is'.
+	 * </P>
+	 * <P>
+	 * For primitive datatypes and their wrapper classes show the primitive
+	 * values.
+	 * </P>
+	 * <P>
+	 * For all <code>Array</code>s traverse over all elements.
+	 * </P>
+	 * <P>
+	 * For datatypes that implement <code>Iterable</code> interface traverse
+	 * over all elements.
+	 * </P>
+	 * <P>
+	 * For datatypes that implement <CODE>{@link Traversal Traversal}</CODE>
+	 * interface traverse over all elements.
+	 * </P>
+	 * <P>
+	 * For an instance of a declared class show all fields
+	 * </P>
+	 * 
+	 * @param obj the given object
+	 */
+	private static String makeString(Object obj) {
+
+		// if the object is null, we are done
+		if (obj == null)
+			return "null";
+
+		// if the object is a String already - show it
+		if (obj instanceof java.lang.String)
+			return result + " \"" + obj.toString() + "\"";
+
+		// if the object is a Color object already - show it
+		if (obj instanceof java.awt.Color)
+			return result + " \"" + obj.toString() + "\"";
+
+		Class<?> objClass = obj.getClass();
+
+		// if the object is of primitive data type
+		// or an instance of a wrapper class - use default toString method
+		if (objClass.isPrimitive()
+				|| Inspector.isWrapperClass(objClass.getName())) {
+			return result + obj.toString();
+		}
+
+		// if the class where the object is defined defined its own toString
+		// method, use the String it produces
+		String s = hasDefinedToString(obj);
+		if (!(s == null))
+			s = INDENT + s + "\n";
+		else
+			s = "\n";
+		// System.out.println("returned from hasDefinedString");
+
+		// check whether the object has been viewed before, if not,
+		// enter a record for this object into the hashmap
+		Integer i1 = obj.hashCode();
+		Integer i1match = hashmap.get(i1);
+
+		if (i1match != null) {
+			// object has been displayed already - show class name and its id
+			return obj.getClass().getName() + ":" + i1match;
+		} else {
+			counter = counter + 1;
+			i1match = counter;
+			hashmap.put(i1, counter);
+		}
+
+		/** handle the Canvas class in the draw teachpack */
+		if (Inspector.isOurCanvas(obj.getClass().getName()))
+			return result + obj.toString();
+
+		// if the object is an Array -
+		// traverse over the data
+		if (obj instanceof Object[]) {
+			String result = "\n" + INDENT + " new Object[](){";
+			INDENT = INDENT + "  ";
+			for (int i = 0; i < Array.getLength(obj); i++) {
+				result = result + "\n" + INDENT
+						+ makeString(((Object[]) obj)[i]) + ",";
+			}
+			if (Array.getLength(obj) > 0) {
+				result = result.substring(0, result.length() - 1);
+			}
+			INDENT = INDENT.substring(0, INDENT.length() - 2);
+			return result = result + "}";
+		}
+
+		// for an instance of a declared class start with the class name
+
+		String result = s + INDENT + " new " + objClass.getName() + ":"
+				+ i1match + "(";
+		// + ":" + counter + "(";
+		INDENT = INDENT + "  ";
+		String field;
+
+		// if the object is Iterable -
+		// traverse over the data generated by the iterator
+		if (obj instanceof Iterable) {
+			result = result + "){"
+					+ makeIterableStrings(((Iterable<?>) obj).iterator())
+					+ "}";
+		}
+
+		// instance of a Map: show the class and the key-value bindings
+		else if (obj instanceof Map) {
+			result = result + "){" + makeMapStrings((AbstractMap<?, ?>) obj)
+					+ "}";
+		}
+
+		/** instance of a class that may have several defined fields */
+		else {
+			Reflector r = new Reflector(obj);
+
+			// TBD: print only the public fields for Java library classes
+			/*
+			 * if (objClass.getName().startsWith("java."))
+			 * System.out.println("Java library class: " + objClass.getName());
+			 */
+
+			/** display all fields */
+			for (Field f : r.sampleDeclaredFields) {
+				try {
+					f.setAccessible(true);
+
+					if ((f.get(obj)) == null)
+						field = "this." + f.getName() + " = null";
+					else
+						field = "this." + f.getName() + " = "
+								+ makeString(f.get(obj));
+
+					result = result + "\n" + INDENT + field;
+
+				} catch (IllegalAccessException e) {
+					System.out
+							.println("makeString cannot access the field "
+									+ f.getName() + " of the class "
+									+ r.sampleClass.getName()
+									+ "\n   message: " + e.getMessage());
+				}
+			}
+			/** close parentheses and finish up */
+			result = result + ")";
+		}
+
+		INDENT = INDENT.substring(0, INDENT.length() - 2);
+		return result;
+	}
+
+	/**
+	 * Produce a <code>String</code> that represents the data generated by the
+	 * given iterator -- comma separated.
+	 * 
+	 * @param it the iterator for generating data
+	 * @return the <code>String</code> that represents all generated data
+	 */
+	private static String makeIterableStrings(Iterator<?> it) {
+		String result = "";
+		while (it.hasNext()) {
+			result = result + "\n" + INDENT + makeString(it.next()) + ",";
+		}
+		/** remove the last comma - if any data is present */
+		if (result.length() > 0)
+			return result.substring(0, result.length() - 1);
+		else
+			return result;
+	}
+
+	/**
+	 * Produce a <code>String</code> representation of the entries in the given
+	 * <code>Map</code>.
+	 * 
+	 * @param <K> the type of the keys in this <code>Map</code>
+	 * @param <V> the type of the values in this <code>Map</code>
+	 * @param hm the <code>Map</code> to represent as <code>String</code>
+	 * @return a <code>String</code> representation of the key and values in
+	 *         this <code>Map</code>
+	 */
+	private static <K, V> String makeMapStrings(Map<K, V> hm) {
+		String result = "";
+		Set<Map.Entry<K, V>> data = new HashSet<Map.Entry<K, V>>(hm.entrySet());
+		
+		for (Map.Entry<K, V> entry : data) {
+			result = result + "\n" + INDENT + "(key: "
+					+ makeString(entry.getKey()) + "\n" + INDENT
+					+ " value: " + makeString(entry.getValue()) + "),";
+		}
+		
+		/** remove the last comma - if any data is present */
+		if (result.length() > 0)
+			return result.substring(0, result.length() - 1);
+		else
+			return result;
+	}
+
+	/**
+	 * Produce a String generated by this object's <code>toString</code> method
+	 * when the method has been defined there.
+	 * 
+	 * @param o the object to be converted to <code>String</code>
+	 * @return null if the <code>toString</code> method has not been redefined,
+	 *         or the <code.String</code> generated by the <code>toString</code>
+	 *         method
+	 */
+	private static String hasDefinedToString(Object o) {
+
+		Method tsm = null;
+
+		// *** traverse up the class inheritance chain
+		Class<?> c = o.getClass();
+		Class<?> cs = c.getSuperclass();
+
+		while (c != null) {
+			// *** find the toString method
+			try {
+				// *** get the method toString for this class
+				tsm = c.getDeclaredMethod("toString", new Class[] {});
+			}
+			// *** if method not found, do nothing
+			catch (NoSuchMethodException e) {
+				// -- omitted diagnostics
+				// -- System.out.println("NoSuchMethodException:" +
+				// -- e.getMessage());
+				// -- System.out.println("Class: " + c.getName() + "\n");
+			}
+
+			// *** if found, invoke the method and return
+			if (tsm != null) {
+				try {
+					// *** toString method found - get the declaring class
+					Class<?> defclass = tsm.getDeclaringClass();
+
+					/* I've removed dots for a couple of reasons.
+					 * First and foremost, printing out to the 
+					 * console is an expensive operation, and it's
+					 * one of the reasons why the Tester is running
+					 * as slowly as it is.  Second, when we're running
+					 * a bunch of tests (in the hundreds or thousands)
+					 * it's going to cause to even greater slow downs
+					 * because we're just filling up the console with
+					 * dots.
+					 * *Wes*  Feb 11, 2009
+					 */
+					// -- show progress for long programs
+					/*dots = dots + 1;
+					System.out.print(".");
+					if (dots >= 60) {
+						System.out.println();
+						dots = 0;
+					}*/
+					// omit toString method in the Object class or
+					// AbstractCollection
+					if (defclass.getName().equals("java.lang.Object")
+							|| defclass.getName().equals(
+									"java.util.AbstractCollection"))
+						return "";
+					else {
+						// invoke the toString method and return the String it
+						// produces
+						tsm.setAccessible(true);
+						return (String) tsm.invoke(o, new Object[] {});
+					}
+				}
+				// *** catch errors in invoking the toString method
+				catch (IllegalAccessException e) {
+					// *** do nothing
+					// this should never happen
+					// -- omitted diagnostics
+					System.out.println("IllegalAccessException:"
+							+ e.getMessage());
+					System.out
+							.println("Incorrectly invoked toString method in the class:"
+									+ o.getClass().getName() + "\n");
+				} catch (InvocationTargetException e) {
+					// *** do nothing
+					// this should never happen
+					// -- omitted diagnostics
+					System.out.println("InvocationTargetException:"
+							+ e.getMessage());
+					System.out
+							.println("Incorrectly invoked toString method in the class:"
+									+ o.getClass().getName() + "\n");
+				}
+			}
+			// *** look for toString defined in the super class-es
+			else {
+				c = cs;
+				cs = c.getSuperclass();
+			}
+		}
+		return "";
+	}
+
+}

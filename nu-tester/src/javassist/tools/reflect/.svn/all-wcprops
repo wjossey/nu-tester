@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect
+END
+CannotCreateException.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/CannotCreateException.java
+END
+Compiler.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/Compiler.java
+END
+Metalevel.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/Metalevel.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/package.html
+END
+ClassMetaobject.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/ClassMetaobject.java
+END
+Reflection.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/Reflection.java
+END
+Sample.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/Sample.java
+END
+CannotReflectException.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/CannotReflectException.java
+END
+CannotInvokeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/CannotInvokeException.java
+END
+Metaobject.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/Metaobject.java
+END
+Loader.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/reflect/Loader.java
+END

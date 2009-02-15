@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert
+END
+TransformAfter.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/TransformAfter.java
+END
+TransformBefore.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/TransformBefore.java
+END
+TransformCall.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/TransformCall.java
+END
+Transformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/Transformer.java
+END
+TransformReadField.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/TransformReadField.java
+END
+TransformWriteField.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/TransformWriteField.java
+END
+TransformNew.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/TransformNew.java
+END
+TransformNewClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/TransformNewClass.java
+END
+TransformFieldAccess.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/TransformFieldAccess.java
+END
+TransformAccessArrayField.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/convert/TransformAccessArrayField.java
+END

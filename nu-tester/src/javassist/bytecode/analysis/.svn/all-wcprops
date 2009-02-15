@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis
+END
+Frame.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/Frame.java
+END
+FramePrinter.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/FramePrinter.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/package.html
+END
+Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/Type.java
+END
+SubroutineScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/SubroutineScanner.java
+END
+MultiArrayType.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/MultiArrayType.java
+END
+Analyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/Analyzer.java
+END
+Subroutine.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/Subroutine.java
+END
+MultiType.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/MultiType.java
+END
+Executor.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/Executor.java
+END
+IntQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/IntQueue.java
+END
+Util.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/bytecode/analysis/Util.java
+END

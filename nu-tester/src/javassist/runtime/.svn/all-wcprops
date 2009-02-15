@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/runtime
+END
+DotClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/runtime/DotClass.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/runtime/package.html
+END
+Inner.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/runtime/Inner.java
+END
+Cflow.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/runtime/Cflow.java
+END
+Desc.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/runtime/Desc.java
+END

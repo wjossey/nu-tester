@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler
+END
+JvstTypeChecker.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/JvstTypeChecker.java
+END
+MemberCodeGen.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/MemberCodeGen.java
+END
+SyntaxError.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/SyntaxError.java
+END
+KeywordTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/KeywordTable.java
+END
+CodeGen.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/CodeGen.java
+END
+Javac.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/Javac.java
+END
+MemberResolver.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/MemberResolver.java
+END
+Lex.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/Lex.java
+END
+Parser.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/Parser.java
+END
+AccessorMaker.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/AccessorMaker.java
+END
+ProceedHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/ProceedHandler.java
+END
+TypeChecker.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/TypeChecker.java
+END
+NoFieldException.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/NoFieldException.java
+END
+JvstCodeGen.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/JvstCodeGen.java
+END
+SymbolTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/SymbolTable.java
+END
+CompileError.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/CompileError.java
+END
+TokenId.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/compiler/TokenId.java
+END

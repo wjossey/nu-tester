@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/web
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/web/package.html
+END
+Webserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/web/Webserver.java
+END
+BadHttpRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/web/BadHttpRequest.java
+END
+Viewer.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/90/trunk/Tester1.2-Stable/src/javassist/tools/web/Viewer.java
+END

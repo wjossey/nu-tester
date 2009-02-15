@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/125/trunk/Tester1.2-Stable/src/tester
+END
+Reflector.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/92/trunk/Tester1.2-Stable/src/tester/Reflector.java
+END
+Tester.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/134/trunk/Tester1.2-Stable/src/tester/Tester.java
+END
+ISame.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/92/trunk/Tester1.2-Stable/src/tester/ISame.java
+END
+Traversal.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/92/trunk/Tester1.2-Stable/src/tester/Traversal.java
+END
+ErrorReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/92/trunk/Tester1.2-Stable/src/tester/ErrorReport.java
+END
+Printer.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/133/trunk/Tester1.2-Stable/src/tester/Printer.java
+END
+Example.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/92/trunk/Tester1.2-Stable/src/tester/Example.java
+END
+AnnotatedTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/135/trunk/Tester1.2-Stable/src/tester/AnnotatedTest.java
+END
+Main.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/124/trunk/Tester1.2-Stable/src/tester/Main.java
+END
+IllegalUseOfTraversalException.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/92/trunk/Tester1.2-Stable/src/tester/IllegalUseOfTraversalException.java
+END
+Inspector.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/92/trunk/Tester1.2-Stable/src/tester/Inspector.java
+END
+TestMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/92/trunk/Tester1.2-Stable/src/tester/TestMethod.java
+END
+IExamples.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/92/trunk/Tester1.2-Stable/src/tester/IExamples.java
+END
